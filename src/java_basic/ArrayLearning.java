@@ -13,5 +13,4 @@ public class ArrayLearning {
             System.out.println(myIntArray[elementIndex]);
         }
     }
-
 }
