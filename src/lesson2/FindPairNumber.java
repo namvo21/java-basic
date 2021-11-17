@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class FindPairNumber {
     public static void main(String[] args)
     {
-        int[] intMyArray = {1, 2, 4, 6, 7, 8, 4, 5, 9};
+        int[] intMyArray = {1, 2, 3, 4, 5, 6};
         boolean isNotFound = true;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input number, please");
