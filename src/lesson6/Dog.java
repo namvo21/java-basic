@@ -1,12 +1,12 @@
 package lesson6;
 
+import java.security.SecureRandom;
+
 public class Dog extends Animal{
 
     @Override
     public int speed() {
-        if(super.speed() < 60)
-            return super.speed();
-        else
-            return 60;
+        int randomSpeed = new SecureRandom().nextInt(61);
+        return randomSpeed;
     }
 }

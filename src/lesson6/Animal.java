@@ -17,7 +17,7 @@ public class Animal {
     }
 
     public int speed(){
-        int randomSpeed = new SecureRandom().nextInt(101);
+        int randomSpeed = new SecureRandom().nextInt(150);
         return randomSpeed;
     }
 

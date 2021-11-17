@@ -10,15 +10,12 @@ public class AnimalRacing {
 
         Animal horse = new Horse();
         horse.setAnimalName("Horse");
-        horse.speed();
 
         Animal tiger = new Tiger();
         tiger.setAnimalName("Tiger");
-        tiger.speed();
 
         Animal dog = new Dog();
         dog.setAnimalName("Dog");
-        dog.speed();
 
         animalList.add(horse);
         animalList.add(tiger);
