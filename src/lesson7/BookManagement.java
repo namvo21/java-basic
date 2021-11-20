@@ -5,13 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BookManagement extends Book{
-    static List<Book> bookList = new ArrayList<>();
+    static  List<Book> bookList = new ArrayList<>();
 
     public static void main(String[] args) {
 
+
         int userInput;
         int MAX_INPUT_TIMES = 3;
-        int TryAgain = 0;
+        int tryAgain = 0;
         boolean isContinuing = true;
 
         while(isContinuing){
@@ -32,8 +33,8 @@ public class BookManagement extends Book{
                 isContinuing = false;
             else {
                 System.out.println("Your option is not available");
-                TryAgain++;
-                if (TryAgain == MAX_INPUT_TIMES)
+                tryAgain++;
+                if (tryAgain == MAX_INPUT_TIMES)
                     break;
             }
         }

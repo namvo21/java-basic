@@ -1,5 +1,7 @@
 package lesson7;
 
+import java.security.SecureRandom;
+
 public class HousewithBuilder {
 
     private String color = "White";
@@ -27,6 +29,7 @@ public class HousewithBuilder {
     public String getTopRoofColor() {
         return topRoofColor;
     }
+
 
     // Customer Service | Inner class
     public static class Builder{
