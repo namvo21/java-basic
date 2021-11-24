@@ -8,14 +8,11 @@ public class AnimalRacing {
         Animal winner;
         List<Animal> animalList = new ArrayList<>();
 
-        Animal horse = new Horse();
-        horse.setAnimalName("Horse");
+        Animal horse = new Animal("Horse", 75);
 
-        Animal tiger = new Tiger();
-        tiger.setAnimalName("Tiger");
+        Animal tiger = new Animal("Tiger", 100);
 
-        Animal dog = new Dog();
-        dog.setAnimalName("Dog");
+        Animal dog = new Animal("Dog", 60);
 
         animalList.add(horse);
         animalList.add(tiger);
@@ -24,11 +21,11 @@ public class AnimalRacing {
         winner = animalList.get(0);
 
         for (int i = 0; i < animalList.size(); i++) {
-            if(animalList.get(i).speed() > winner.speed()){
+            if(animalList.get(i).getSpeed() > winner.getSpeed()){
                 winner = animalList.get(i);
             }
         }
 
-        System.out.println("Winner is " + winner.getAnimalName() + " with speed: " + winner.speed());
+        System.out.println("Winner is " + winner.getAnimalName() + " with speed: " + winner.getSpeed());
     }
 }

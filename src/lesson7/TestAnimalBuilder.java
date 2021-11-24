@@ -18,30 +18,35 @@ public class TestAnimalBuilder {
                 builder.
                         withAnimalName("Tiger").
                         withFlyable(false).
+                        withSpeed(100).
                         build();
 
         AnimalwithBuilder dog =
                 builder.
                         withAnimalName("Dog").
                         withFlyable(false).
+                        withSpeed(60).
                         build();
 
         AnimalwithBuilder horse =
                 builder.
                         withAnimalName("Horse").
                         withFlyable(false).
+                        withSpeed(75).
                         build();
 
         AnimalwithBuilder falcon =
                 builder.
                         withAnimalName("Falcon").
                         withFlyable(true).
+                        withSpeed(80).
                         build();
 
         AnimalwithBuilder eagle =
                 builder.
                         withAnimalName("Eagle").
                         withFlyable(true).
+                        withSpeed(100).
                         build();
 
         animalList.add(tiger);
@@ -55,7 +60,7 @@ public class TestAnimalBuilder {
                 animalwithSpeed.add(
                         builder.
                                 withAnimalName(animalList.get(i).getAnimalName()).
-                                withSpeed().
+                                withSpeed(animalList.get(i).getSpeed()).
                                 build());
             }
             if (animalList.get(i).getFlyable() == true)

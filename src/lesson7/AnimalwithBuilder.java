@@ -28,6 +28,15 @@ public class AnimalwithBuilder {
         return speed;
     }
 
+    @Override
+    public String toString() {
+        return "AnimalwithBuilder{" +
+                "animalName='" + animalName + '\'' +
+                ", flyable=" + flyable +
+                ", speed=" + speed +
+                '}';
+    }
+
     public static class Builder{
         private String animalName;
         private boolean flyable = true;
@@ -43,9 +52,8 @@ public class AnimalwithBuilder {
             return this;
         }
 
-        public Builder withSpeed(){
-            speed = new SecureRandom().nextInt(150);
-            this.speed = speed;
+        public Builder withSpeed(int maxSpeed){
+            this.speed = new SecureRandom().nextInt(maxSpeed);
             return this;
         }
 
