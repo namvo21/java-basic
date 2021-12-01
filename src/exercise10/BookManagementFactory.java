@@ -28,14 +28,8 @@ public class BookManagementFactory {
             if(userInput == 1)
                 BookFactory.addBook(bookExerciseList,filePath);
             else if(userInput == 2){
-                System.out.println("Input your Book ID");
-                int iSBN = scanner.nextInt();
-                for (BookExercise bookExercise : bookExerciseList) {
-                    if(bookExercise.getISBN() == iSBN){
-                        BookFactory.retrieveBook(filePath);
-                        System.out.println("Your book information is ISBN: " + bookExercise.getISBN() + " - Book Title: " + bookExercise.getBookTitle() + " - Book Author: "+ bookExercise.getBookAuthor() + " - Book Year: " + bookExercise.getBookYear());
-                    }
-                }
+                BookFactory.retrieveBook(filePath);
+                BookFactory.printBook(bookExerciseList);
             }
             else if (userInput == 0)
                 isContinuing = false;

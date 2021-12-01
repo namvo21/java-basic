@@ -70,4 +70,15 @@ public class BookFactory {
 
         return bookListExercise;
     }
+
+    public static void printBook(List<BookExercise> bookExercisesList){
+        System.out.println("Input your Book ID");
+        Scanner scanner = new Scanner(System.in);
+        int iSBN = scanner.nextInt();
+        for (BookExercise bookExercise : bookExercisesList) {
+            if(bookExercise.getISBN() == iSBN){
+                System.out.println("Your book information is ISBN: " + bookExercise.getISBN() + " - Book Title: " + bookExercise.getBookTitle() + " - Book Author: "+ bookExercise.getBookAuthor() + " - Book Year: " + bookExercise.getBookYear());
+            }
+        }
+    }
 }
