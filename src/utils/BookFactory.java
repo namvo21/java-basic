@@ -76,9 +76,11 @@ public class BookFactory {
         Scanner scanner = new Scanner(System.in);
         int iSBN = scanner.nextInt();
         for (BookExercise bookExercise : bookExercisesList) {
-            if(bookExercise.getISBN() == iSBN){
+            if(bookExercise.getISBN() == iSBN)
                 System.out.println("Your book information is ISBN: " + bookExercise.getISBN() + " - Book Title: " + bookExercise.getBookTitle() + " - Book Author: "+ bookExercise.getBookAuthor() + " - Book Year: " + bookExercise.getBookYear());
-            }
+            else
+                System.out.println("Your book is not available");
+                break;
         }
     }
 }

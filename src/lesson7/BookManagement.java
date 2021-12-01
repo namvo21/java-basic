@@ -60,7 +60,6 @@ public class BookManagement extends Book{
 
     public static void RetrieveBook() {
         int iSBN;
-        boolean isFound = true;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input your Book ID");
@@ -70,6 +69,9 @@ public class BookManagement extends Book{
         for (Book book : bookList) {
             if(book.getISBN() == iSBN)
                 System.out.println("Your book information is ISBN: " + book.getISBN() + " - Book Title: " + book.getTitle() + " - Book Author: "+ book.getAuthor() + " - Book Year: " + book.getYear());
+            else
+                System.out.println("Your book is not available");
+                break;
         }
     }
 }
