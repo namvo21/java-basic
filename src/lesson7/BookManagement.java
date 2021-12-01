@@ -8,8 +8,6 @@ public class BookManagement extends Book{
     static  List<Book> bookList = new ArrayList<>();
 
     public static void main(String[] args) {
-
-
         int userInput;
         int MAX_INPUT_TIMES = 3;
         int tryAgain = 0;

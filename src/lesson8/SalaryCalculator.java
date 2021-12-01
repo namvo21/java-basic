@@ -1,6 +1,7 @@
 package lesson8;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SalaryCalculator {
@@ -15,14 +16,21 @@ public class SalaryCalculator {
     }
 
     public static void main(String[] args) {
-        Employee ceo, standard, manager;
+        Employee ceo, standardEmployee, manager;
         ceo = new CEO(100,0);
         manager = new Manager(50, 3);
-        standard = new StandardEmployee(30, 5);
+        standardEmployee = new StandardEmployee(30, 5);
+        standardEmployee.setSupportSalary(3);
 
         List<Employee> employeeList = new ArrayList<>();
-        employeeList.add(ceo);
         employeeList.add(manager);
-        employeeList.add(standard);
+        employeeList.add(ceo);
+        employeeList.add(standardEmployee);
+
+        System.out.println(employeeList);
+
+        Collections.sort(employeeList);
+
+        System.out.println(employeeList);
     }
 }
